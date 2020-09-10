@@ -11,7 +11,7 @@ The framework used is [Lumen](https://lumen.laravel.com/), this is a lightweight
 | Basic | Last working day of the month (Monday - Friday). |
 | Bonus | 10th of each month, or the next working day if the 10th is a weekend. |
 
-# Usage
+## Usage
 
 For initial setup, it is required to install dependencies using the following command:
 ```shell script
