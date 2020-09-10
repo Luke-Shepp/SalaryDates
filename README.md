@@ -35,6 +35,21 @@ Upon completion, a CSV file will be available in the `storage` directory of the 
 There are various settings which may be configured, these can be seen in the `config/` directory, 
 or by examining the env file and changing environment variables where appropriate.
 
+## Tests
+
+This project contains various tests utilising PHPUnit. The full test suite can be ran using the following 
+command from the project root:
+
+```shell script
+phpunit
+```
+
+To specify a specific test or a test class, use the `--filter` option, for example
+
+```shell script
+phpunit --filter CsvWriterTest
+```
+
 ## Dependencies
 
 - PHP 7.2+
