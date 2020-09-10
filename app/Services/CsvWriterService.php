@@ -35,6 +35,6 @@ class CsvWriterService
      */
     private function filepath(): string
     {
-        return storage_path(Config::get('csv.filename'));
+        return storage_path(basename(Config::get('csv.filename')));
     }
 }
