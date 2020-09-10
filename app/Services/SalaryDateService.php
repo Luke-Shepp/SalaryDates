@@ -19,6 +19,9 @@ class SalaryDateService
     }
 
     /**
+     * Create a CSV file detailing the dates for the next 12 months when Basic Salary
+     * and Salary Bonus are paid.
+     *
      * @return bool
      * @throws FileException
      */

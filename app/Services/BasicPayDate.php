@@ -8,6 +8,8 @@ use Carbon\CarbonPeriod;
 class BasicPayDate extends PayDate
 {
     /**
+     * Calculates the basic pay date by finding the last weekday of the given month
+     *
      * @inheritDoc
      */
     public function __construct(CarbonImmutable $month)

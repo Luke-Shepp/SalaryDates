@@ -8,15 +8,17 @@ use Illuminate\Support\Facades\Config;
 class CsvWriterService
 {
     /**
-     * @param array $lines
+     * Write an array of data to a CSV file.
+     *
+     * @param array $lines Multi-dimensional array: $lines[row][column] = data
      * @throws FileException
      */
     public function write(array $lines)
     {
-        $fp = fopen($this->filename(), 'w+');
+        $fp = fopen($this->filepath(), 'w+');
 
         if ($fp === false) {
-            throw new FileException('Unable to open specified file: ' . $this->filename());
+            throw new FileException('Unable to open specified file: ' . $this->filepath());
         }
 
         foreach ($lines as $line) {
@@ -27,9 +29,11 @@ class CsvWriterService
     }
 
     /**
+     * Builds a filepath for the output file
+     *
      * @return string
      */
-    private function filename(): string
+    private function filepath(): string
     {
         return storage_path(Config::get('csv.filename'));
     }

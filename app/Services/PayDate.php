@@ -15,6 +15,8 @@ abstract class PayDate
     abstract public function __construct(CarbonImmutable $month);
 
     /**
+     * Returns a Y-m-d formatted string of the calculated date
+     *
      * @return string
      */
     public function getDate(): string
