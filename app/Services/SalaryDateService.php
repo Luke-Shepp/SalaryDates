@@ -32,8 +32,8 @@ class SalaryDateService
 
             $output[] = [
                 $month->format('M/y'),
-                (new BasicPayDate($month))->getDate()->format('Y-m-d'),
-                (new BonusPayDate($month))->getDate()->format('Y-m-d'),
+                (new BasicPayDate($month))->getDate(),
+                (new BonusPayDate($month))->getDate(),
             ];
         }
 

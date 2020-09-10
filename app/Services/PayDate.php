@@ -15,10 +15,10 @@ abstract class PayDate
     abstract public function __construct(CarbonImmutable $month);
 
     /**
-     * @return CarbonImmutable
+     * @return string
      */
-    public function getDate(): CarbonImmutable
+    public function getDate(): string
     {
-        return $this->date;
+        return $this->date->format('Y-m-d');
     }
 }
