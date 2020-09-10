@@ -2,6 +2,8 @@
 
 This application utilises a console command to generate and store a CSV file of salary payment dates.
 
+The framework used is [Lumen](https://lumen.laravel.com/), this is a lightweight version of [Laravel](https://laravel.com/) intended for API's, therefore fits the use of this simple CLI project more than the full-featured version of Laravel.
+
 #### Pay Dates
 
 | Type | Rule |
