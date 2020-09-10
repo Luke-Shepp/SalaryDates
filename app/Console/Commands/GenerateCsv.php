@@ -2,8 +2,10 @@
 
 namespace App\Console\Commands;
 
+use App\Exceptions\FileException;
 use App\Services\SalaryDateService;
 use Illuminate\Console\Command;
+use Illuminate\Support\Facades\Config;
 
 class GenerateCsv extends Command
 {
@@ -30,9 +32,12 @@ class GenerateCsv extends Command
      * Execute the console command.
      *
      * @return bool
+     * @throws FileException
      */
     public function handle(): bool
     {
+        $this->info("Generating CSV at " . Config::get('csv.filename'));
+
         return $this->service->generate();
     }
 }

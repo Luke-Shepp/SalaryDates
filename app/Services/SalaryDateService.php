@@ -2,6 +2,7 @@
 
 namespace App\Services;
 
+use App\Exceptions\FileException;
 use Carbon\CarbonImmutable;
 
 class SalaryDateService
@@ -19,6 +20,7 @@ class SalaryDateService
 
     /**
      * @return bool
+     * @throws FileException
      */
     public function generate(): bool
     {
