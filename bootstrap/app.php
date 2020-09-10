@@ -60,6 +60,8 @@ $app->singleton(
 */
 
 $app->configure('app');
+$app->configure('csv');
+$app->configure('salary');
 
 /*
 |--------------------------------------------------------------------------
