@@ -31,13 +31,12 @@ class GenerateCsv extends Command
     /**
      * Execute the console command.
      *
-     * @return bool
      * @throws FileException
      */
-    public function handle(): bool
+    public function handle()
     {
         $this->info("Generating CSV at " . Config::get('csv.filename'));
 
-        return $this->service->generate();
+        $this->service->generate();
     }
 }
